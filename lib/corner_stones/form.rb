@@ -43,7 +43,7 @@ module CornerStones
       fill_in(options[:in], :with => value)
       page.execute_script %Q{ $('##{autocomplete_id}').trigger("focus") }
       page.execute_script %Q{ $('##{autocomplete_id}').trigger("keydown") }
-      sleep 1
+      sleep 5
       page.execute_script %Q{ $('.ui-menu-item a:contains("#{value}")').trigger("mouseenter").trigger("click"); }
     end
 
